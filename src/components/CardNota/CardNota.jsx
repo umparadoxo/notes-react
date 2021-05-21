@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./estilo.css";
-import {ReactComponent as DeleteSVG} from "../assets/img/delete.svg";
+import {ReactComponent as DeleteSVG} from "../../assets/img/delete.svg";
 //importar um SVG como react componente precisa estar com a 
 //primeira letra maiúscula
 
