@@ -3,20 +3,20 @@ import "./estilo.css";
 
 class ListaDeCategorias extends Component {
 
-    constructor(){
+    constructor() {
         super();
-        this.state = {categorias:[]}
+        this.state = { categorias: [] }
         this._novasCategorias = this._novasCategorias.bind(this);
     }
 
     componentDidMount() {
         this.props.categorias.inscrever(this._novasCategorias);
     }
-    componentWillUnmount(){
+    componentWillUnmount() {
         this.props.categorias.desinscrever(this._novasCategorias)
     }
     _novasCategorias(categorias) {
-        this.setState({...this.state, categorias})
+        this.setState({ ...this.state, categorias })
     }
 
     _handleEventoInput(e) {
@@ -32,10 +32,12 @@ class ListaDeCategorias extends Component {
             <section className='lista-categorias'>
                 <ul className='lista-categorias_lista'>
                     {this.state.categorias.map((categoria, index) => {
-                        return <li key={index} className='lista-categorias_item'>{categoria}</li>
-                    }
-                    )
-                    }
+                        return (
+                            <li key={index} className="lista-categorias_item">
+                                {categoria}
+                            </li>
+                        );
+                    })}
                 </ul>
                 <input
                     type='text'

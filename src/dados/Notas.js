@@ -1,7 +1,7 @@
 export default class ArrayDeNotas {
     constructor() {
         this.notas = [];
-
+        this._inscritos = [];
     }
 
     adicionarNota(titulo, texto, categoria) {
@@ -10,7 +10,7 @@ export default class ArrayDeNotas {
         this.notificar();
     }
 
-    apagarNotas(indice) {
+    apagarNota(indice) {
         this.notas.splice(indice, 1);
         this.notificar();
     }
